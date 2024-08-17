@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+requests
+GoogleNews
+langchain_community
+langchain_core
+ollama serve &
+ollama run phi3:3.8b
