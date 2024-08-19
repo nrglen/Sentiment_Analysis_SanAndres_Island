@@ -4,11 +4,7 @@ from DataPreparation import dataCollection
 from nlp_1 import modelo
 from nlp_2 import modelo_2
 import numpy as np
-"""""
-headers = {
-    "authorization": st.secrets["OPENAI_API_KEY"],
-    "content-type": "application/json"
-}"""""
+
 
 
 st.title("Analizador de sentimientos sobre las ciudades turisticas de Colombia")
