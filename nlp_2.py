@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 
 @st.cache_data(persist=True)
 def modelo_2(sentimientos):
-  load_dotenv()
+  #load_dotenv()
   api_key = os.getenv("OPENAI_API_KEY")
 
   prompt = ChatPromptTemplate.from_messages([
