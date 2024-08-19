@@ -5,6 +5,13 @@ from nlp_1 import modelo
 from nlp_2 import modelo_2
 import numpy as np
 
+import toml
+
+# Cargar la configuración desde el archivo TOML
+config = toml.load("config.toml")
+
+# Acceder a la clave API
+api_key = config["openai"]["api_key"]
 
 
 
