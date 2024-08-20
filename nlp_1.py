@@ -14,14 +14,14 @@ from dotenv import load_dotenv
 #@st.cache_data(persist=True)
 def modelo(contents):
   # Cargar las variables de entorno desde el archivo .env
-  #load_dotenv()
+  load_dotenv()
   api_key = os.getenv("OPENAI_API_KEY")
   
   prompt = ChatPromptTemplate.from_messages([
   ("system", "You are a sentiment analyzer for news articles.\n"
   "Read the following news article and determine 3 most important emotions,dont explain the emotion, only put the word for them, dont put a period after the last emotion.\n"
   "analiza las emociones de cada noticia y clasificalas dentro de la lista de emociones: \n"
-  "Optimismo, Emoción, crecimiento, seguridad,satisfacción, anticipation, admiración, anhelo, miedo, aburrimiento, economia "),
+  "Optimismo, Emoción, crecimiento, seguridad,satisfacción, anticipacion, admiración, anhelo, miedo, aburrimiento, economia "),
 
   ("human", "Analyze the following news article:\n\"{noticia}\"")])
 

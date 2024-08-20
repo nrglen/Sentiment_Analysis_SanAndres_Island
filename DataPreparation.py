@@ -1,5 +1,6 @@
 from GoogleNews import GoogleNews
 import pandas as pd
+from ydata_profiling import ProfileReport
 
 # Data Collection
 def dataCollection(fecha_inicio, fecha_fin, ciudad):
@@ -15,8 +16,8 @@ def dataCollection(fecha_inicio, fecha_fin, ciudad):
     results = googlenews.result()
 
     df = pd.DataFrame(results)
-
-    #df.to_csv(f'noticias_turismo_{ciudad}.csv', index=False)
+    
+    df.to_csv('Noticias.csv', index=False)
     print(df)
     # Data Preparation
 
@@ -24,3 +25,4 @@ def dataCollection(fecha_inicio, fecha_fin, ciudad):
     contents.name = 'Descripcion de la noticia'
     return contents
     #print(f"Noticias entre {fecha_inicio} y {fecha_fin}")
+
